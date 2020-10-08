@@ -1,0 +1,30 @@
+{
+    "name": "cbaconnier/laravel-mvc-to-ddd",
+    "description": "Automatically change the default Laravel MVC architecture to DDD architecture",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clément Baconnier",
+            "email": "clement.baconnier@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "illuminate/console": "^8.0",
+        "illuminate/filesystem": "^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cbaconnier\\LaravelMvcToDdd\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cbaconnier\\LaravelMvcToDdd\\LaravelMvcToDddProvider"
+            ]
+        }
+    }
+}
