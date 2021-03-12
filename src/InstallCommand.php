@@ -225,6 +225,8 @@ use Domain\User\Rules\PasswordValidationRules;',
         $this->replaceAllInFile([
             'namespace App\Actions\Fortify' => 'namespace Domain\User\Actions',
             'class ResetUserPassword'       => 'class ResetUserPasswordAction',
+            'use Laravel\Fortify\Contracts\ResetsUserPasswords;' => 'use Laravel\Fortify\Contracts\ResetsUserPasswords;
+use Domain\User\Rules\PasswordValidationRules;'
         ], base_path('src/Domain/User/Actions/ResetUserPasswordAction.php'));
 
         (new Filesystem)->move(base_path('app/Actions/Fortify/UpdateUserPassword.php'), base_path('src/Domain/User/Actions/UpdateUserPasswordAction.php'));
