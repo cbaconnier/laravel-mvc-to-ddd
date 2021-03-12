@@ -1,19 +1,28 @@
-# Automatically change the default Laravel MVC architecture to DDD architecture
+# Automatically change the default Laravel MVC architecture to a DDD architecture approach
 
 At the moment, I do not have the attention to add new classes / helpers or any feature that's not provided by Laravel.
 
- ## Status
-  - Work in progress but **should** work.   
-I will not be responsible if this package destroys your code. 
-It should be used on a fresh installation **only**.
+
+ ## Disclaimer
+⚠️ I will not be responsible if this package destroys your code. 
+It should **only** be used on a fresh installation.
+
+## Compatibilities
+ - Laravel 8.0
+ - Laravel Fortify
   
 ## Requirements
   - Fresh installation of Laravel 8
+  - Laravel Fortify  _(optional)_ 
 
 ## Installation
 You can install the package via composer:
 
     composer require cbaconnier/laravel-mvc-to-ddd --dev
+
+_Note: You can remove it once it has been installed_
+
+    composer remove cbaconnier/laravel-mvc-to-ddd
 
 ## Usage
 
