@@ -1,6 +1,6 @@
-# Automatically change the default Laravel MVC architecture to a DDD architecture approach
+# Laravel MVC to DDD
 
-At the moment, I do not have the attention to add new classes / helpers or any feature that's not provided by Laravel.
+Automatically change the default Laravel MVC architecture to a DDD architecture approach.  
 
 
  ## Disclaimer
@@ -20,14 +20,13 @@ You can install the package via composer:
 
     composer require cbaconnier/laravel-mvc-to-ddd --dev
 
-_Note: You can remove it once it has been installed_
-
-    composer remove cbaconnier/laravel-mvc-to-ddd
-
 ## Usage
 
     php artisan ddd:install
   
+  _Note: You can remove it once it has been installed_
+
+    composer remove cbaconnier/laravel-mvc-to-ddd
   
 ## Todo
   - Support laravel/jetstream
