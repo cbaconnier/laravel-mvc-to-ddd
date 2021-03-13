@@ -1,7 +1,7 @@
 # Laravel MVC to DDD
 
 Automatically change the default Laravel MVC architecture to a DDD architecture approach.  
-You can see an example of what it will do on a fresh Laravel application using Livewire, Jetstream and teams feature: https://github.com/cbaconnier/laravel-mvc-to-ddd-demo
+You can see an example of what it will do on a fresh Laravel application using Livewire, Jetstream and teams feature: [cbaconnier/laravel-mvc-to-ddd-demo](https://github.com/cbaconnier/laravel-mvc-to-ddd-demo)
 
 
  ## Disclaimer
