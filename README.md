@@ -36,6 +36,44 @@ Since the command may be destructive to your application, it's **strongly recomm
   - Support laravel/ui
   - Cleanup the empty folders
  
+## Architecture
+
+```
+.
+├── boostrap
+├── config
+├── database
+├── public
+├── resources
+├── routes
+├── src
+│   ├── App
+│   │   ├── Controllers
+│   │   ├── Exceptions
+│   │   ├── Providers
+│   │   └── View
+│   ├── Domain  
+│   │   ├── Team
+│   │   │   ├── Actions
+│   │   │   ├── Models
+│   │   │   └── Policies
+│   │   └── User   
+│   │       ├── Actions
+│   │       ├── Models
+│   │       └── Rules
+│   └── Support  
+│       └── Middleware
+├── storage
+└── tests
+    ├── App
+    │   ├── ApiTokens
+    │   ├── Auth
+    │   ├── Profile
+    │   └── Teams
+    ├── Domain
+    └── App
+```
+ 
 ## Credit
 Thanks to [Brent Roose](https://github.com/brendt) for his awesome work 
 on [Laravel Beyond CRUD](https://spatie.be/products/laravel-beyond-crud) 
