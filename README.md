@@ -31,10 +31,6 @@ Since the command may be destructive to your application, it's **strongly recomm
   _Note: You can remove it once it has been installed_
 
     composer remove cbaconnier/laravel-mvc-to-ddd
-  
-## Todo
-  - Support laravel/ui
-  - Cleanup the empty folders
  
 ## Architecture
 
@@ -73,7 +69,11 @@ Since the command may be destructive to your application, it's **strongly recomm
     ├── Domain
     └── App
 ```
- 
+   
+## Todo
+  - Support laravel/ui
+  - Cleanup the empty folders
+
 ## Credit
 Thanks to [Brent Roose](https://github.com/brendt) for his awesome work 
 on [Laravel Beyond CRUD](https://spatie.be/products/laravel-beyond-crud) 
