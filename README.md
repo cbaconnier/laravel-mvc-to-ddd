@@ -10,10 +10,12 @@ It should **only** be used on a fresh installation.
 ## Compatibilities
  - Laravel 8.0
  - Laravel Fortify
+ - Laravel Jetstream _(Livewire & Inertia)_
   
 ## Requirements
   - Fresh installation of Laravel 8
   - Laravel Fortify  _(optional)_ 
+  - Laravel Jetstream  _(optional)_ 
 
 ## Installation
 You can install the package via composer:
@@ -21,6 +23,7 @@ You can install the package via composer:
     composer require cbaconnier/laravel-mvc-to-ddd --dev
 
 ## Usage
+Since the command may be destructive to your application, it's **strongly recommended** to commit before you run this command
 
     php artisan ddd:install
   
@@ -29,7 +32,6 @@ You can install the package via composer:
     composer remove cbaconnier/laravel-mvc-to-ddd
   
 ## Todo
-  - Support laravel/jetstream
   - Support laravel/ui
   - Cleanup the empty folders
  
