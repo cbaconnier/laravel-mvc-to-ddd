@@ -141,9 +141,10 @@ class LaravelInstaller extends Installer
     $_ENV[\'APP_BASE_PATH\'] ?? dirname(__DIR__)
 );'                                     => 'use App\Application;
 
-$app = (new Application(
+$app = new Illuminate\Foundation\Application(
     $_ENV[\'APP_BASE_PATH\'] ?? dirname(__DIR__)
-))->useAppPath(\'src/App\');',
+);
+$app->useAppPath($app->basePath(\'src/App\'));',
             'App\Http\Kernel::class'    => 'App\HttpKernel::class',
             'App\Console\Kernel::class' => 'App\ConsoleKernel::class',
         ], base_path('bootstrap/app.php'));
