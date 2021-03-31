@@ -19,18 +19,25 @@ class InstallCommand extends Command
         FortifyInstaller $fortifyInstaller,
         JetstreamInstaller $jetstreamInstaller
     ) {
+        $this->info('Installing for Laravel...');
         $laravelInstaller->install();
 
+
+
         if ($fortifyInstaller->enabled()) {
+            $this->info('Installing for Fortify...');
             $fortifyInstaller->install();
         }
 
         if ($jetstreamInstaller->enabled()) {
+            $this->info('Installing for Jetstream...');
             $jetstreamInstaller->install();
         }
 
-
+        $this->info('Running composer dump autoload...');
         $this->updateComposer();
+
+        $this->info('All done!');
     }
 
 
