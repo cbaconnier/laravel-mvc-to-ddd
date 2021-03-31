@@ -8,11 +8,6 @@ You can see an example of what it will do on a fresh Laravel application using L
 ⚠️ I will not be responsible if this package destroys your code. 
 It should **only** be used on a fresh installation.
 
-## Compatibilities
- - Laravel 8.0
- - Laravel Fortify
- - Laravel Jetstream _(Livewire & Inertia)_
-  
 ## Requirements
   - Fresh installation of Laravel 8
   - Laravel Fortify  _(optional)_ 
