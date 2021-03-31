@@ -51,6 +51,7 @@ class LaravelInstaller extends Installer
             'class Kernel'           => 'class ConsoleKernel',
             ' as ConsoleKernel'      => '',
             'extends ConsoleKernel'  => 'extends Kernel',
+            '/Commands'              => '/Console/Commands',
         ], base_path('src/App/ConsoleKernel.php'));
 
         (new Filesystem)->move(base_path('app/Http/Kernel.php'), base_path('src/App/HttpKernel.php'));
