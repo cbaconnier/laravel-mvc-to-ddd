@@ -12,6 +12,7 @@ It should **only** be used on a fresh installation.
   - Fresh installation of Laravel 8
   - Laravel Fortify  _(optional)_ 
   - Laravel Jetstream  _(optional)_ 
+  - Laravel Pest  _(optional)_
 
 ## Installation
 You can install the package via composer:
