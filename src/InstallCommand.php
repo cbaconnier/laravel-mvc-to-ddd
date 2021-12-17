@@ -5,6 +5,7 @@ namespace Cbaconnier\LaravelMvcToDdd;
 use Cbaconnier\LaravelMvcToDdd\Installers\FortifyInstaller;
 use Cbaconnier\LaravelMvcToDdd\Installers\JetstreamInstaller;
 use Cbaconnier\LaravelMvcToDdd\Installers\LaravelInstaller;
+use Cbaconnier\LaravelMvcToDdd\Installers\PestInstaller;
 use Illuminate\Console\Command;
 use Illuminate\Support\Composer;
 
@@ -17,12 +18,11 @@ class InstallCommand extends Command
     public function handle(
         LaravelInstaller $laravelInstaller,
         FortifyInstaller $fortifyInstaller,
-        JetstreamInstaller $jetstreamInstaller
+        JetstreamInstaller $jetstreamInstaller,
+        PestInstaller $pestInstaller
     ) {
         $this->info('Installing for Laravel...');
         $laravelInstaller->install();
-
-
 
         if ($fortifyInstaller->enabled()) {
             $this->info('Installing for Fortify...');
@@ -32,6 +32,12 @@ class InstallCommand extends Command
         if ($jetstreamInstaller->enabled()) {
             $this->info('Installing for Jetstream...');
             $jetstreamInstaller->install();
+        }
+
+
+        if ($pestInstaller->enabled()) {
+            $this->info('Installing for Pest...');
+            $pestInstaller->install();
         }
 
         $this->info('Running composer dump autoload...');
