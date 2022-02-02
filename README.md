@@ -63,7 +63,7 @@ Since the command may be destructive to your application, it's **strongly recomm
     │   ├── Profile
     │   └── Teams
     ├── Domain
-    └── App
+    └── Support
 ```
    
 ## Todo
