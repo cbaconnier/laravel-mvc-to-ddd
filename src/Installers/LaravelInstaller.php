@@ -113,6 +113,11 @@ class LaravelInstaller extends Installer
             'namespace App\Http\Middleware;' => 'namespace Support\Middleware;',
         ], base_path('src/Support/Middleware/VerifyCsrfToken.php'));
 
+        (new Filesystem)->move(base_path('app/Http/Middleware/ValidateSignature.php'), base_path('src/Support/Middleware/ValidateSignature.php'));
+        $this->replaceAllInFile([
+            'namespace App\Http\Middleware;' => 'namespace Support\Middleware;',
+        ], base_path('src/Support/Middleware/ValidateSignature.php'));
+
         /* Models */
         (new Filesystem)->move(base_path('app/Models/User.php'), base_path('src/Domain/User/Models/User.php'));
         $this->replaceAllInFile([
