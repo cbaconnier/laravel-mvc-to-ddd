@@ -40,6 +40,7 @@ use Domain\User\Rules\PasswordValidationRules;',
         (new Filesystem)->move(base_path('app/Actions/Fortify/ResetUserPassword.php'), base_path('src/Domain/User/Actions/ResetUserPasswordAction.php'));
         $this->replaceAllInFile([
             'namespace App\Actions\Fortify'                      => 'namespace Domain\User\Actions',
+            'App\Models\User'                                    => 'Domain\User\Models\User',
             'class ResetUserPassword'                            => 'class ResetUserPasswordAction',
             'use Laravel\Fortify\Contracts\ResetsUserPasswords;' => 'use Laravel\Fortify\Contracts\ResetsUserPasswords;
 use Domain\User\Rules\PasswordValidationRules;',
@@ -47,8 +48,10 @@ use Domain\User\Rules\PasswordValidationRules;',
 
         (new Filesystem)->move(base_path('app/Actions/Fortify/UpdateUserPassword.php'), base_path('src/Domain/User/Actions/UpdateUserPasswordAction.php'));
         $this->replaceAllInFile([
-            'namespace App\Actions\Fortify'        => 'namespace Domain\User\Actions',
-            'class UpdateUserPassword'             => 'class UpdateUserPasswordAction',
+            'namespace App\Actions\Fortify' => 'namespace Domain\User\Actions',
+            'class UpdateUserPassword'      => 'class UpdateUserPasswordAction',
+            'App\Models\User'               => 'Domain\User\Models\User',
+
             'use Illuminate\Support\Facades\Hash;' => 'use Domain\User\Rules\PasswordValidationRules;
 use Illuminate\Support\Facades\Hash;',
         ], base_path('src/Domain/User/Actions/UpdateUserPasswordAction.php'));
@@ -56,6 +59,7 @@ use Illuminate\Support\Facades\Hash;',
         (new Filesystem)->move(base_path('app/Actions/Fortify/UpdateUserProfileInformation.php'), base_path('src/Domain/User/Actions/UpdateUserProfileInformationAction.php'));
         $this->replaceAllInFile([
             'namespace App\Actions\Fortify'      => 'namespace Domain\User\Actions',
+            'App\Models\User'                    => 'Domain\User\Models\User',
             'class UpdateUserProfileInformation' => 'class UpdateUserProfileInformationAction',
         ], base_path('src/Domain/User/Actions/UpdateUserProfileInformationAction.php'));
 
