@@ -56,6 +56,8 @@ class JetstreamInstaller extends Installer
         (new Filesystem)->move(base_path('app/Actions/Jetstream/DeleteUser.php'), base_path('src/Domain/User/Actions/DeleteUserAction.php'));
         $this->replaceAllInFile([
             'namespace App\Actions\Jetstream;' => 'namespace Domain\User\Actions;',
+            'App\Models\Team'                  => 'Domain\Team\Models\Team',
+            'App\Models\User'                  => 'Domain\User\Models\User',
             'class DeleteUser'                 => 'class DeleteUserAction',
         ], base_path('src/Domain/User/Actions/DeleteUserAction.php'));
 
@@ -111,30 +113,39 @@ use Illuminate\Support\ServiceProvider;',
         (new Filesystem)->move(base_path('app/Actions/Jetstream/AddTeamMember.php'), base_path('src/Domain/Team/Actions/AddTeamMemberAction.php'));
         $this->replaceAllInFile([
             'namespace App\Actions\Jetstream;' => 'namespace Domain\Team\Actions;',
+            'App\Models\Team'                  => 'Domain\Team\Models\Team',
+            'App\Models\User'                  => 'Domain\User\Models\User',
             'class AddTeamMember'              => 'class AddTeamMemberAction',
         ], base_path('src/Domain/Team/Actions/AddTeamMemberAction.php'));
 
         (new Filesystem)->move(base_path('app/Actions/Jetstream/CreateTeam.php'), base_path('src/Domain/Team/Actions/CreateTeamAction.php'));
         $this->replaceAllInFile([
             'namespace App\Actions\Jetstream;' => 'namespace Domain\Team\Actions;',
+            'App\Models\Team'                  => 'Domain\Team\Models\Team',
+            'App\Models\User'                  => 'Domain\User\Models\User',
             'class CreateTeam'                 => 'class CreateTeamAction',
         ], base_path('src/Domain/Team/Actions/CreateTeamAction.php'));
 
         (new Filesystem)->move(base_path('app/Actions/Jetstream/DeleteTeam.php'), base_path('src/Domain/Team/Actions/DeleteTeamAction.php'));
         $this->replaceAllInFile([
             'namespace App\Actions\Jetstream;' => 'namespace Domain\Team\Actions;',
+            'App\Models\Team'                  => 'Domain\Team\Models\Team',
             'class DeleteTeam'                 => 'class DeleteTeamAction',
         ], base_path('src/Domain/Team/Actions/DeleteTeamAction.php'));
 
         (new Filesystem)->move(base_path('app/Actions/Jetstream/InviteTeamMember.php'), base_path('src/Domain/Team/Actions/InviteTeamMemberAction.php'));
         $this->replaceAllInFile([
             'namespace App\Actions\Jetstream;' => 'namespace Domain\Team\Actions;',
+            'App\Models\Team'                  => 'Domain\Team\Models\Team',
+            'App\Models\User'                  => 'Domain\User\Models\User',
             'class InviteTeamMember'           => 'class InviteTeamMemberAction',
         ], base_path('src/Domain/Team/Actions/InviteTeamMemberAction.php'));
 
         (new Filesystem)->move(base_path('app/Actions/Jetstream/RemoveTeamMember.php'), base_path('src/Domain/Team/Actions/RemoveTeamMemberAction.php'));
         $this->replaceAllInFile([
             'namespace App\Actions\Jetstream;' => 'namespace Domain\Team\Actions;',
+            'App\Models\Team'                  => 'Domain\Team\Models\Team',
+            'App\Models\User'                  => 'Domain\User\Models\User',
             'class RemoveTeamMember'           => 'class RemoveTeamMemberAction',
         ], base_path('src/Domain/Team/Actions/RemoveTeamMemberAction.php'));
 
@@ -142,6 +153,8 @@ use Illuminate\Support\ServiceProvider;',
         $this->replaceAllInFile([
             'namespace App\Actions\Jetstream;' => 'namespace Domain\Team\Actions;',
             'class UpdateTeamName'             => 'class UpdateTeamNameAction',
+            'App\Models\Team'                  => 'Domain\Team\Models\Team',
+            'App\Models\User'                  => 'Domain\User\Models\User',
         ], base_path('src/Domain/Team/Actions/UpdateTeamNameAction.php'));
 
         /* Models */
