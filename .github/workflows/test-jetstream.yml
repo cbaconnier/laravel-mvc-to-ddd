@@ -33,10 +33,10 @@ jobs:
 
       - name: Setup Laravel
         run: |
-          composer create-project laravel/laravel:^9 .
+          composer create-project laravel/laravel:^10 .
           composer require cbaconnier/laravel-mvc-to-ddd:* --no-interaction --dev
-          composer require laravel/jetstream:* --no-interaction --no-update
-          composer config repositories.jetstream '{"type": "path", "url": "jetstream"}' --file composer.json
+          composer require laravel/jetstream:* --no-interaction
+
       - name: Checkout code
         uses: actions/checkout@v3
         with:
@@ -44,8 +44,8 @@ jobs:
 
       - name: Install Jetstream
         run: |
-          composer update "laravel/jetstream" --prefer-dist --no-interaction --no-progress -W
           php artisan jetstream:install ${{ matrix.stack }} --teams --api --verification
+
       - name: Install NPM dependencies
         run: npm i
 
