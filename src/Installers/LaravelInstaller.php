@@ -160,6 +160,11 @@ $app->useAppPath($app->basePath(\'src/App\'));',
             'App\Models\User::class' => 'Domain\User\Models\User::class',
         ], base_path('config/auth.php'));
 
+        $this->replaceAllInFile([
+            'App\Http\Middleware\VerifyCsrfToken::class' => 'Support\Middleware\VerifyCsrfToken::class',
+            'App\Http\Middleware\EncryptCookies::class'  => 'Support\Middleware\EncryptCookies::class',
+        ], base_path('config/sanctum.php'));
+
         /* Route */
         $this->replaceAllInFile([
             'App.Models.User.{id}' => 'Domain.User.Models.User.{id}',
