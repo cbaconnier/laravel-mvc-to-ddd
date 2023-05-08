@@ -9,7 +9,7 @@ You can see an example of what it will do on a fresh Laravel application using L
 It should **only** be used on a fresh installation.
 
 ## Requirements
-  - Fresh installation of Laravel 9
+  - Fresh installation of Laravel 10
   - Laravel Fortify  _(optional)_ 
   - Laravel Jetstream  _(optional)_ 
   - Laravel Pest  _(optional)_
